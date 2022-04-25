@@ -6,7 +6,14 @@ import { HeaderComponent } from './compnents/header/header.component';
 import { FooterComponent } from './compnents/footer/footer.component';
 import { ContentComponent } from './compnents/content/content.component';
 import { HomeComponent } from './pages/home/home.component';
+import { Route, RouterModule } from '@angular/router';
 
+const ROUTES: Route[] = [
+  {
+    path: '',
+    component: HomeComponent,
+  },
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +22,11 @@ import { HomeComponent } from './pages/home/home.component';
     ContentComponent,
     HomeComponent,
   ],
-  imports: [BrowserModule],
+  imports: [
+    BrowserModule,
+    //RouterModule.forRoot(ROUTES)
+  ],
+
   providers: [],
   bootstrap: [AppComponent],
 })
