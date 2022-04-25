@@ -1,26 +1,16 @@
 <div class="row row-cols-1 row-cols-md-2 mb-3 text-center">
-  <div class="col">
+  <div *ngFor="let item of listaCards" class="col">
     <div class="card mb-4 rounded-3 shadow-sm">
       <div class="card-header py-3">
-        <h4 class="my-0 fw-normal">Comida</h4>
+        <h4 class="my-0 fw-normal">{{ item.titulo }}</h4>
       </div>
       <div class="card-body">
-        <img src="assets/comida.jpg" class="img-fluid" />
-        <button type="button" class="w-100 btn btn-lg btn-outline-primary">
-          Ver opções
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-    <div class="card mb-4 rounded-3 shadow-sm">
-      <div class="card-header py-3">
-        <h4 class="my-0 fw-normal">Bebida</h4>
-      </div>
-      <div class="card-body">
-        <img src="assets/bebida.jpg" class="img-fluid" />
-        <button type="button" class="w-100 btn btn-lg btn-outline-primary">
+        <img src="{{ item.imagem }}" class="img-fluid" />
+        <button
+          onclick="alert('item.titulo')"
+          type="button"
+          class="w-100 btn btn-lg btn-outline-primary"
+        >
           Ver opções
         </button>
       </div>
