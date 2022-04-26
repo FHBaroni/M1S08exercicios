@@ -12,7 +12,6 @@ import { food_mock } from 'src/app/utils/food-mock';
 export class ContentComponent implements OnInit {
   listaCards: cards[] = food_mock;
 
-  listaBebidas: bebidas[] = bebida_mock;
   constructor() {}
 
   ngOnInit(): void {}

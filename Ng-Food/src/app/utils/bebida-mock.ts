@@ -9,17 +9,17 @@ export const bebida_mock: bebidas[] = [
     valor: '12',
   },
   {
+    titulo: 'Limonada',
+    imagem: 'assets/limonada.jpg',
+    descricao:
+      'Suco de cevadiss deixa as pessoas mais interessantis.Admodum accumsan disputationi eu sit. Vide electram sadipscing et per..',
+    valor: '10',
+  },
+  {
     titulo: 'Chá inglês',
     imagem: 'assets/cha.jpg',
     descricao:
       'Si num tem leite então bota uma pinga aí cumpadi!Casamentiss faiz malandris se pirulitá.Aenean aliquam molestie leo, vitae iaculis nisl.',
     valor: '8',
-  },
-  {
-    titulo: 'Limonada',
-    imagem: 'caipirinha.jpg',
-    descricao:
-      'Interagi no mé, cursus quis, vehicula ac nisi.Suco de cevadiss deixa as pessoas mais interessantis.Admodum accumsan disputationi eu sit. Vide electram sadipscing et per..',
-    valor: '10',
   },
 ];

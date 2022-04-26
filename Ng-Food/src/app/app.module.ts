@@ -10,6 +10,7 @@ import { Route } from '@angular/router';
 import { ComidaComponent } from './pages/comida/comida.component';
 import { BebidaComponent } from './pages/bebida/bebida.component';
 import { ComidaListaComponent } from './compnents/comida-lista/comida-lista.component';
+import { BebidaListaComponent } from './compnents/bebida-lista/bebida-lista.component';
 
 const ROUTES: Route[] = [
   {
@@ -17,8 +18,12 @@ const ROUTES: Route[] = [
     component: HomeComponent,
   },
   {
-    path: 'comida',
+    path: 'Comida',
     component: ComidaComponent,
+  },
+  {
+    path: 'Bebida',
+    component: BebidaComponent,
   },
 ];
 @NgModule({
@@ -31,6 +36,7 @@ const ROUTES: Route[] = [
     ComidaComponent,
     BebidaComponent,
     ComidaListaComponent,
+    BebidaListaComponent,
   ],
   imports: [BrowserModule, RouterModule.forRoot(ROUTES)],
 
