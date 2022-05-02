@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { bebidas } from 'src/app/models/bebidas.models';
 import { bebida_mock } from 'src/app/utils/bebida-mock';
@@ -8,9 +9,14 @@ import { bebida_mock } from 'src/app/utils/bebida-mock';
   styleUrls: ['./bebida-lista.component.scss'],
 })
 export class BebidaListaComponent implements OnInit {
-  listaBebidas: bebidas[] = bebida_mock;
+  listaBebidas: bebidas[] = [];
+  constructor(private http: HttpClient) {}
 
-  constructor() {}
-
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.http
+      .get<bebidas[]>('http://localhost:3000/bebidas')
+      .subscribe((resultado) => {
+        this.listaBebidas = resultado;
+      });
+  }
 }
